@@ -1,0 +1,39 @@
+sharon.brant, moshe.bns
+Student Sharon Brant (204337497), Student Moshe Ben Shoshe (204415897)
+EX: 4
+
+FILES:
+
+README
+Makefile 
+
+REMARKS:
+
+
+ANSWERS:
+
+1.a. We should add support to the command "leave_group" which will check
+ whether the command was written legally (in the format of coammand and name of
+ the group) and then write the command to the server which will handle the request. 
+
+ b.Again, add the command "leave group" - then look for such a group in the
+ group list and remove the client from that group. We will also check for
+ errors: group name which doesn't exist or the client isn't part of this group. 
+After removing the client we will check if there is a group with only one client. 
+If so we will delete it after announcing the last client that the group is deleted. 
+ 
+2. TCP protocol promises to send the message correctly while UDP doesn't - and
+ messages that we send might arrive with mistakes, missing parts or even not
+ arrive at all. Whatsapp application is about sending messages from clients and
+ this is why our goal is to send the messages correctly - and for this purpose,
+ we better use the TCP protocol.
+
+ 3. Skype and online-games:  these programs need to send messages in real-time
+ and very fast - the UDP is not reliable but work much faster. Even if we lose
+ some information it works fast so its the better protocol for this goal. 
+
+ 4. It is possible to save all the data that the server holds in a database -
+ the server will communicate and manage the data inside the database.
+ If and when the server will crash we will be able to connect to the database
+ at the next time the server start running and we will get all the information
+ we need.  
